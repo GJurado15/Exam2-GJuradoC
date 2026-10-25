@@ -1,0 +1,55 @@
+The goal of this project is to find the file sizes of files and directories/folders. We will first build the 
+tree of files using the File object in Java that provides details about the particular file/folder and also
+the array of files/folders under it. 
+
+The implementation of a node in the tree is provided in FileNode.java.
+FileSizeFinder.java is the driver program that traverses the tree that uses iterators that you will implement
+to find the file/folder sizes and print them to the screen. See Expected Output below for what should be printed.
+The size of a folder is the sum of the sizes of all it's children. Hence, the need for a post-order traversal. 
+All the children should be visited first to get their sizes before we can determine the size of the parent. 
+
+Download and unzip the FileTest.zip file from the D2L Assignment folder.
+Note the path where you unzipped the folder. For example, C:\Downloads\FileTest. 
+Set filePath in FileSizeFinder.java to this path.
+
+There are three TODOs in FileTree.java. Please follow the directions in the TODO comments to complete 
+these sections of code. 
+The first one is to build the FileNode tree using the File object using a recursive algorithm. 
+The second is to complete the class that can be instantiated as a depth-first, post-order traversal iterator.
+The third is to complete the class that can be instantiated as a breadth-first traversal iterator 
+
+Expected Output:
+File size listing
+D:\FileSizeTest\Documents                                                   2944174
+D:\FileSizeTest\Music                                                            23918966
+D:\FileSizeTest\Pictures                                                         206764
+D:\FileSizeTest\Videos                                                           109350531
+D:\FileSizeTest                                                                        143776528
+===============================================================================================
+Breadth first listing of files
+D:\FileSizeTest                                                                                143776528
+D:\FileSizeTest\2203.01537.pdf                                                   539960
+D:\FileSizeTest\Documents                                                               2944174
+D:\FileSizeTest\inspiring-cinematic-background-music-for-videos-5717.mp3         6751712
+D:\FileSizeTest\istockphoto-955562928-612x612.jpg                                64421
+D:\FileSizeTest\Music                                                            23918966
+D:\FileSizeTest\Pictures                                                         206764
+D:\FileSizeTest\Videos                                                           109350531
+D:\FileSizeTest\Documents\2203.01384.pdf                                         408369
+D:\FileSizeTest\Documents\2203.01440.pdf                                         304187
+D:\FileSizeTest\Documents\2203.01537.pdf                                         539960
+D:\FileSizeTest\Documents\2203.01579.pdf                                         191336
+D:\FileSizeTest\Documents\2203.01599.pdf                                         275978
+D:\FileSizeTest\Documents\2203.01741.pdf                                         850366
+D:\FileSizeTest\Documents\2203.01857.pdf                                         373978
+D:\FileSizeTest\Music\honor-and-sword-main-11222.mp3                             7732244
+D:\FileSizeTest\Music\inspiring-cinematic-background-music-for-videos-5717.mp3   6751712
+D:\FileSizeTest\Music\into-the-night-20928.mp3                                   4500584
+D:\FileSizeTest\Music\relax-and-sleep-18565.mp3                                  4934426
+D:\FileSizeTest\Pictures\istockphoto-1195492942-612x612.jpg                      22732
+D:\FileSizeTest\Pictures\istockphoto-1255848209-612x612.jpg                      40914
+D:\FileSizeTest\Pictures\istockphoto-492188248-612x612.jpg                       42212
+D:\FileSizeTest\Pictures\istockphoto-520041979-612x612.jpg                       36485
+D:\FileSizeTest\Pictures\istockphoto-955562928-612x612.jpg                       64421
+D:\FileSizeTest\Videos\occultationgraphh264fullsize.mp4                          3830921
+D:\FileSizeTest\Videos\space_station_live-_go_for_eva_31.mp4                     105519610
